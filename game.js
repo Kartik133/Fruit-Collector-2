@@ -94,7 +94,7 @@ class Game{
                  
                   if (player.index !== null) {
                     for (var i = 0; i < fruitGroup.length; i++) {
-                        if (fruitGroup.get(i).isTouching(players)) {
+                        if (fruitGroup.get(i).isTouching(players[player.index-1])) {
                             fruitGroup.get(i).destroy();
                             player.score +=1; 
                             player.update(); 
