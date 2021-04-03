@@ -123,7 +123,7 @@ class Game{
          })
          
          fill(0);
-         stroke(0);
+         stroke(255);
          textSize(30);
          text(player1Name + ": " + player1,50,50);
          text(player2Name + ": " + player2,50,80);
