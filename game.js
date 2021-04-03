@@ -111,12 +111,22 @@ class Game{
          player2Score.on("value",(data)=>{
              player2 = data.val();
          })
+
+         var player1Namee = database.ref("players/player1/name");
+         player1Namee.on("value",(data)=>{
+             player1Name = data.val();
+         })
+
+         var player2Namee = database.ref("players/player2/name");
+         player2Namee.on("value",(data)=>{
+             player2Name = data.val();
+         })
          
          fill(0);
          stroke(0);
          textSize(30);
-         text("Player 1: " + player1,50,50);
-         text("Player 2: " + player2,50,80);
+         text(player1Name + ": " + player1,50,50);
+         text(player2Name + ": " + player2,50,80);
     }
 
     end(){
